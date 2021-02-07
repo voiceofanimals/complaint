@@ -6,7 +6,7 @@ function sendemail()
     var body ="Respected Authorities," + "\n" +"\n";
     body += "I request your urgent attention regarding a case at SPCA Chandigarh" + "\n" +"\n";
     body += "Token Number: " + document.getElementById("token").value + "\n" + "\n";
-    body += document.getElementById("issue").value + "\n" + "\n";
+    body += "The issue is that" + "\n" + document.getElementById("issue").value + "\n" + "\n";
     body += "I request you to kindly take immediate action in resolving this issue" + "\n" +"\n";
     body += "Sincerely," + "\n" +"\n";
     body +=  document.getElementById("name").value + "\n";
@@ -21,33 +21,54 @@ function sendemail()
     window.location.href = location;
 }
 </script>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
+    <!--
+    <div class="login-page">
+        <div class="form">
+          <form class="register-form" action="javascript: sendemail()">
+            <input id="token" type="text" name="token" placeholder="Token Number"/>
+            <textarea input id="issue" type="text" name="issue" placeholder="Issue Details"></textarea>
+            <input id="name" type="text" name="name" placeholder="Your Name"/>
+            <input id="contact" type="number" name="contact" placeholder="Contact Number"/>
+            <button type="submit" value="Submit"></button>
+          </form>
+        </div>
+      </div>
+    -->
+    
+<div class="login-page">
+<div class="form">
 <form action="javascript: sendemail()">
 
-Token Number<br>
-<input id="token" type="text" name="token">
+Token Number:<br>
+<input id="token" type="text" name="token" required>
 <br>
 
 Issue Faced:<br>
-<textarea input id="issue" type="text" name="issue">
+<textarea rows="6" input id="issue" type="text" name="issue" required>
 </textarea>
 <br>
 
 Your Name:<br>
-<input id="name" type="text" name="name">
+<input id="name" type="text" name="name" required>
 <br>
 
 Contact Number:<br>
-<input id="contact" type="number" name="contact">
+<input id="contact" type="number" name="contact" required>
 <br>
 
-<!--
-Email:<br>
-<input id="email" type="text" name="email">
--->
-
-<input type="submit" value="Submit">
+<br><br>
+<button type="submit" value="Submit">SUBMIT</button>
 </form>
+</div>
+</div>
+
 </body>
+</html>
 
