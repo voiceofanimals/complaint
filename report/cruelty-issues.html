@@ -11,7 +11,7 @@ function sendemail()
     body += "Date: " + document.getElementById("date").value + " , " + document.getElementById("time").value + "\n" + "\n";
     body += "A call to the SPCA Cruelty Inspector was made at: " + document.getElementById("reporting_time").value + "\n" + "\n";
     body += document.getElementById("inspection_issues").value + "\n" + "\n";
-    body += "I kindly request you to take strict and necessary action so this does not happen in future." + "\n" +"\n";
+    body += "I kindly request you to take strict and necessary action so this does not happen in future. Thank you" + "\n" +"\n";
     body += "Sincerely," + "\n" +"\n";
     body +=  document.getElementById("name").value + "\n";
     body +=  document.getElementById("contact").value;
@@ -32,20 +32,6 @@ function sendemail()
 </head>
 <body>
 
-    <!--
-    <div class="login-page">
-        <div class="form">
-          <form class="register-form" action="javascript: sendemail()">
-            <input id="token" type="text" name="token" placeholder="Token Number"/>
-            <textarea input id="issue" type="text" name="issue" placeholder="Issue Details"></textarea>
-            <input id="name" type="text" name="name" placeholder="Your Name"/>
-            <input id="contact" type="number" name="contact" placeholder="Contact Number"/>
-            <button type="submit" value="Submit"></button>
-          </form>
-        </div>
-      </div>
-    -->
-    
 <div class="login-page">
 <div><h2>Report Animal Cruelty Inspection Issues</h2></div>
 <div class="form">
@@ -70,9 +56,9 @@ Date of Cruelty:<br>
 <br><br>
 
 Approx Time of Cruelty:<br>
-<input id="time" type="text" name="time" required>
+<input id="time" type="text" name="time">
 </input>
-<br>
+<br><br>
 
 Issue Regarding Cruelty Inspector:<br>
 <textarea rows="5" input id="inspection_issues" type="text" name="inspection_issues" required>

@@ -3,16 +3,16 @@
 <script>
 function sendemail()
 {
-    var body ="Respected Authorities," + "\n" +"\n";
-    body += "I request your urgent attention regarding a case at SPCA Chandigarh" + "\n" +"\n";
-    body += "Token Number: " + document.getElementById("token").value + "\n" + "\n";
-    body += "The issue is that" + "\n" + document.getElementById("issue").value + "\n" + "\n";
-    body += "I request you to kindly take immediate action in resolving this issue" + "\n" +"\n";
-    body += "Sincerely," + "\n" +"\n";
+    var body ="Respected Authorities," + "\n" +"\n" +"\n";
+    body += "I would like to bring to your notice regarding the recent issues I have encountered at SPCA in Sector 38, Chandigarh that is of concern and requires your immediate intervention" + "\n" +"\n";
+    body += document.getElementById("issues").value + "\n" + "\n";
+    body += "Date of visit: " + "\n" + document.getElementById("date").value + "\n" + "\n";
+    body += "I request you to kindly intervene immediately so these issues can be resolved. Thank you" + "\n" +"\n";
+    body += "Yours faithfully," + "\n" +"\n" +"\n";
     body +=  document.getElementById("name").value + "\n";
     body +=  document.getElementById("contact").value;
 
-    var subject = "Complaint Regarding Token No " + document.getElementById("token").value + " at SPCA Chandigarh";
+    var subject = "Issues Regarding SPCA Chandigarh";
     var address = "spca.chandigarh.38@gmail.com,jdahus-chd@nic.in";
     var cc_address = "animalwelfareboard@gmail.com,admr-chd@nic.in";
     var bcc_address = "animalgrievances@gmail.com";
@@ -30,17 +30,19 @@ function sendemail()
 
 
 <div class="login-page">
-<div><h2>Report Animal Treatment Issues</h2></div>
+<div><h2>Report General Issues</h2></div>
 <div class="form">
 <form action="javascript: sendemail()">
 
-Token Number:<br>
-<input id="token" type="text" name="token" required>
+
+Issues Encountered at SPC A:<br>
+<textarea rows="7" input id="issues" type="text" name="issues" required>
+</textarea>
 <br>
 
-Details of the Issue:<br>
-<textarea rows="6" input id="issue" type="text" name="issue" required>
-</textarea>
+Date of visit:<br>
+<input id="date" type="text" name="date" required>
+</input>
 <br>
 
 Your Name:<br>
