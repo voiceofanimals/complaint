@@ -4,20 +4,19 @@
 function sendemail()
 {
     var body ="Respected Authorities," + "\n" +"\n";
-    body += "I wish to bring to your urgent notice regarding a cruelty case near" + document.getElementById("location").value + "\n" +"\n";
-    body += "Following are the details of cruelty:" +"\n";
-    body += "Type of Animal:" + document.getElementById("issue").value + "\n" +"\n";
-    body +=  document.getElementById("issue").value + "\n";
+    body += "I wish to bring to your urgent notice regarding a cruelty case near " + document.getElementById("location").value + "\n" +"\n";
+    body += "Following are the details of cruelty:" +"\n" +"\n";
+    body += "Type of Animal: " + document.getElementById("animal_type").value + "\n" +"\n";
+    body +=  document.getElementById("issue").value + "\n" + "\n";
     body += "Date: " + document.getElementById("date").value + " , " + document.getElementById("time").value + "\n" + "\n";
+    body += "A call to the SPCA Cruelty Inspector was made at: " + document.getElementById("reporting_time").value + "\n" + "\n";
     body += document.getElementById("inspection_issues").value + "\n" + "\n";
-    body += "The issue is that" + "\n" + document.getElementById("issue").value + "\n" + "\n";
-    body += "A call to the SPCA Cruelty Inspector was made at: " + "\n" + document.getElementById("reporting_time").value + "\n" + "\n";
     body += "I kindly request you to take strict and necessary action so this does not happen in future." + "\n" +"\n";
     body += "Sincerely," + "\n" +"\n";
     body +=  document.getElementById("name").value + "\n";
     body +=  document.getElementById("contact").value;
 
-    var subject = "Complaint Regarding Token No " + document.getElementById("token").value + " at SPCA Chandigarh";
+    var subject = "Cruelty Case Near " + document.getElementById("location").value;
     var address = "spca.chandigarh.38@gmail.com,jdahus-chd@nic.in";
     var cc_address = "animalwelfareboard@gmail.com,admr-chd@nic.in";
     var bcc_address = "animalgrievances@gmail.com";
@@ -66,12 +65,12 @@ Details of Animal Cruelty:<br>
 <br><br>
 
 Date of Cruelty:<br>
-<input id="date" type="date" name="date" required>
+<input id="date" type="text" name="date" required>
 </input>
 <br><br>
 
 Approx Time of Cruelty:<br>
-<input id="time" type="time" name="time" required>
+<input id="time" type="text" name="time" required>
 </input>
 <br>
 
@@ -81,7 +80,7 @@ Issue Regarding Cruelty Inspector:<br>
 <br><br>
 
 Approx Time of Calling Cruelty Inspector:<br>
-<input id="reporting_time" type="time" name="reporting_time" required>
+<input id="reporting_time" type="text" name="reporting_time" required>
 </input>
 <br><br>
 
